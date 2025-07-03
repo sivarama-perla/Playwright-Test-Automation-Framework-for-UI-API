@@ -1,4 +1,4 @@
-#  Playwright Testing Framework for UI + API (TypeScript + Cucumber)
+#  Playwright Testing Framework for UI and API (TypeScript + Cucumber)
 
 ## What is this repo about?
 
