@@ -1,14 +1,10 @@
-## ✅ Test Coverage Plan
+## Test Coverage Plan
 
 This section documents the **implemented** and **planned** test automation scenarios for:
+Sauce Demo and Swagger Petstore Websites.
 
-- 🧪 **UI Tests** (using [Playwright](https://playwright.dev))
-- 🔌 **API Tests** (based on [Swagger Petstore](https://petstore.swagger.io/))
-- 🛡️ **Security, Performance, and Accessibility** enhancements
 
----
-
-### ✅ Implemented Scenarios
+###  Implemented Scenarios
 
 #### UI Test (Sauce Demo)
 
@@ -26,9 +22,9 @@ This section documents the **implemented** and **planned** test automation scena
 
 ---
 
-### 🔮 Future Automation Scenarios
+###  Future Automation Scenarios to implement
 
-#### 🔗 Sauce Demo – UI & API
+#### Sauce Demo – UI & API
 
 | Priority | Scenario                          | Layer    | Type               | Positive | Negative | Rationale                          |
 |----------|-----------------------------------|----------|--------------------|----------|----------|------------------------------------|
@@ -42,7 +38,7 @@ This section documents the **implemented** and **planned** test automation scena
 
 ---
 
-#### 🐶 Swagger Petstore – API & UI
+#### Swagger Petstore – API & UI
 
 | Priority | Scenario                                  | Layer    | Type               | Positive | Negative | Rationale                              |
 |----------|-------------------------------------------|----------|--------------------|----------|----------|----------------------------------------|
@@ -60,13 +56,13 @@ This section documents the **implemented** and **planned** test automation scena
 
 ---
 
-### 🧩 Additional High-Value Tests (Recommended Tools)
+###  Additional High-Value Tests (Recommended Tools)
 
 | Area                   | Tool(s)                        | Purpose                                 |
 |------------------------|--------------------------------|-----------------------------------------|
 | Cross-browser Testing  | Playwright (Chromium/FF/WebKit)| Ensure consistency across browsers      |
 | Responsive Design      | Playwright + Device Emulation  | Mobile/tablet/Desktop views             |
-| Accessibility Testing  | Axe-core / Pa11y               | Validate WCAG/ARIA compliance (a11y)    |
+| Accessibility Testing  | Axe-core / Pa11y               | Validate WCAG Guidelines    |
 | Visual Regression      | Playwright Snapshots           | Detect unexpected UI changes            |
 | Performance Benchmarks | Lighthouse CI                  | Measure speed, Core Web Vitals          |
 | Security Scanning      | OWASP ZAP                      | Detect XSS, SQLi, etc.                  |
