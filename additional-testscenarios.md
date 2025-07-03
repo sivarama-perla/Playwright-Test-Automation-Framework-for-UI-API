@@ -8,17 +8,17 @@ Sauce Demo and Swagger Petstore Websites.
 
 #### UI Test (Sauce Demo)
 
-| Test Type | Scenario                          | Path      |
-|-----------|-----------------------------------|-----------|
-| Positive  | Successful login and inventory page validation | ✅ |
-| Negative  | Unsuccessful login and error message validation | ✅ |
+| Test Type | Scenario                          | 
+|-----------|-----------------------------------|
+| Positive  | Successful login and inventory page validation | 
+| Negative  | Unsuccessful login and error message validation |
 
 #### API Test (Swagger Petstore)
 
-| Test Type | Scenario                          | Path      |
-|-----------|-----------------------------------|-----------|
-| Positive  | Get a pet by valid ID             | ✅ |
-| Negative  | Get a pet by **invalid/non-existent** ID | ✅ |
+| Test Type | Scenario                          | 
+|-----------|-----------------------------------|
+| Positive  | Get a pet by valid ID             | 
+| Negative  | Get a pet by **invalid/non-existent** ID | 
 
 ---
 
