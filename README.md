@@ -121,6 +121,12 @@ For additional planned scenarios and test cases (including both UI and API), ref
 - Screenshots of test failures for visual debugging
 
 ---
+Example test run and results to refer as below,
+
+![image](https://github.com/user-attachments/assets/7b5b41d5-2deb-4a93-a039-67f896925a97)
+![image](https://github.com/user-attachments/assets/1815def9-291e-43a0-8ffe-94da80acedc8)
+
+
 
 
 ---
