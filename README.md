@@ -1,9 +1,13 @@
 Playwright Testing Framework for UI + API (Typescript + Cucumber)
 ------------------------------------------------------------------
 What is it?
+
+
 This is an automated testing framework built with Playwright and TypeScript, designed to support both API and UI testing.
 
 Approach
+
+
 The framework is built with TypeScript and Cucumber, following Behavior-Driven Development (BDD) principles using the Gherkin syntax. It applies the Page Object Model (POM) design pattern with shared and reusable methods.
 
 
