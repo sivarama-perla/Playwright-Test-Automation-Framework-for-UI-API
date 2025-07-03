@@ -1,56 +1,72 @@
-What is it?
---------------
-This file covers the additional test scenairos to implement in future.
+## ✅ Test Coverage Plan
 
-Implemented Scenarios
-----------------------------
-UI Test: (Sauce Demo)
--> Positive: Successfull login and validation of product inventory page
--> Negative: Unsuccessfull login and valdiation of Error Message
+This section documents the **implemented** and **planned** test automation scenarios for:
 
-API Test: (Swagger Petstore)
--> Positive: Get a Pet details with valid Pet ID
--> Negative: Attempt to get a non-existent pet by invalid ID
+- 🧪 **UI Tests** (using [Playwright](https://playwright.dev))
+- 🔌 **API Tests** (based on [Swagger Petstore](https://petstore.swagger.io/))
+- 🛡️ **Security, Performance, and Accessibility** enhancements
 
-UI & API Scenarios for Future Automation
--------------------------------------------
+---
 
-Test Scenarios for Swagger Petstore API
-------------------------------------------
-Test case priority	Scenario	                        Layer	        Type	            Positive	   Negative	    Rationale
-1	                Login (valid/invalid/locked user)	UI & API	    Functional	        Yes	            Yes	        Core flow, first touchpoint
-2	                Add to Cart / Remove from Cart	    UI	            Functional	        Yes	            Yes	        Revenue critical
-3	                Checkout Flow	                    UI	            E2E	                Yes	            Yes	        Requires sequential interaction
-4	                Product Sorting	                    UI	            Visual & Functional	Yes	            Yes	        Enhances UX
-5	                Session Timeout Handling	        API	            Security	        Yes	            Yes	        Important for security testing
-6	                API Rate Limiting	                API	            Performance	        Yes	            Yes	        Prevent abuse
-7	                Field Validation (Login, Checkout)	UI	            Input Validation	Yes	            Yes	        Prevents user errors
+### ✅ Implemented Scenarios
 
+#### UI Test (Sauce Demo)
 
-Test Scenarios for Swagger Petstore API
-------------------------------------------
-Test case priority	Scenario	                                    Layer	        Type	            Positive	Negative	Rationale
-1	                Add New Pet (valid/invalid data)	            API	            Functional	        Yes	        Yes	        Core flow for pet management
-2	                Get Pet by ID (existing/nonexistent)	        API	            Functional	        Yes	        Yes	        Verify data retrieval & proper errorhandling
-3	                Update Pet Info	                                API	            Functional	        Yes	        Yes	        Core for modifying existing resources
-4	                Delete Pet (existing/nonexistent)	            API	            Functional	        Yes	        Yes	        Ensure proper cleanup and error handling
-5	                Upload Pet Image	                            API & UI	    Functional	        Yes	        Yes	        Multimedia handling, UX enhancement
-6	                Find Pets by Status (available/pending/sold)	API	            Functional	        Yes	        Yes	        Filters and query param validation
-7	                User Login/Logout	                            UI & API	    Security	        Yes	        Yes	        Authentication flows, prevent unauthorized access
-8	                Input Field Validation (Pet, User data)	        UI & API	    Input Validation	Yes	        Yes	        Prevent invalid data, avoid server errors
-9	                Rate Limiting	                                API	            Performance	        Yes	        Yes	        Protect backend from abuse
-10	                Session Management	                            UI & API	    Security	        Yes	        Yes	        Session expiry, token refresh
-11	                UI Navigation & Responsiveness	                UI	            Visual & Functional	Yes	        Yes	        Usability, cross-device compatibility
+| Test Type | Scenario                          | Path      |
+|-----------|-----------------------------------|-----------|
+| Positive  | Successful login and inventory page validation | ✅ |
+| Negative  | Unsuccessful login and error message validation | ✅ |
 
+#### API Test (Swagger Petstore)
 
+| Test Type | Scenario                          | Path      |
+|-----------|-----------------------------------|-----------|
+| Positive  | Get a pet by valid ID             | ✅ |
+| Negative  | Get a pet by **invalid/non-existent** ID | ✅ |
 
+---
 
-Additional High-Value Tests we can plan and integrate with Playwright
------------------------------------------------------------------------
-Cross-browser Testing (Safari, Firefox, Edge)
-Responsive Design (Mobile vs Desktop)
-Accessibility Audit (a11y) using Axe-core/Pa11y
-Visual Regression Tests (using Playwright snapshots)
-Performace Benchmarks (Lighthouse CI)
-Security Scans (ZAP for OWASP tesing)
+### 🔮 Future Automation Scenarios
 
+#### 🔗 Sauce Demo – UI & API
+
+| Priority | Scenario                          | Layer    | Type               | Positive | Negative | Rationale                          |
+|----------|-----------------------------------|----------|--------------------|----------|----------|------------------------------------|
+| 1        | Login (valid/invalid/locked user) | UI & API | Functional         | ✅        | ✅        | Core flow, first touchpoint         |
+| 2        | Add/Remove from Cart              | UI       | Functional         | ✅        | ✅        | Revenue critical                    |
+| 3        | Checkout Flow                     | UI       | E2E                | ✅        | ✅        | Requires sequential interaction     |
+| 4        | Product Sorting                   | UI       | Visual & Functional| ✅        | ✅        | Enhances UX                         |
+| 5        | Session Timeout Handling          | API      | Security           | ✅        | ✅        | Important for session security      |
+| 6        | API Rate Limiting                 | API      | Performance        | ✅        | ✅        | Prevent abuse or misuse             |
+| 7        | Field Validation (Login/Checkout) | UI       | Input Validation   | ✅        | ✅        | Prevents user errors                |
+
+---
+
+#### 🐶 Swagger Petstore – API & UI
+
+| Priority | Scenario                                  | Layer    | Type               | Positive | Negative | Rationale                              |
+|----------|-------------------------------------------|----------|--------------------|----------|----------|----------------------------------------|
+| 1        | Add New Pet (valid/invalid data)          | API      | Functional         | ✅        | ✅        | Core flow for pet management           |
+| 2        | Get Pet by ID (existing/nonexistent)      | API      | Functional         | ✅        | ✅        | Validate retrieval & error handling    |
+| 3        | Update Pet Info                           | API      | Functional         | ✅        | ✅        | Modify existing pet data               |
+| 4        | Delete Pet (existing/nonexistent)         | API      | Functional         | ✅        | ✅        | Ensure cleanup + 404 handling          |
+| 5        | Upload Pet Image                          | API & UI | Functional         | ✅        | ✅        | File uploads + UI validation           |
+| 6        | Find Pets by Status                       | API      | Functional         | ✅        | ✅        | Query parameter filtering              |
+| 7        | User Login/Logout                         | UI & API | Security           | ✅        | ✅        | Auth flow validation                   |
+| 8        | Input Field Validation (Pet/User data)    | UI & API | Input Validation   | ✅        | ✅        | Prevents malformed data                |
+| 9        | Rate Limiting                             | API      | Performance        | ✅        | ✅        | Avoid backend overload                 |
+| 10       | Session Management                        | UI & API | Security           | ✅        | ✅        | Token expiry, refresh flow             |
+| 11       | UI Navigation & Responsiveness            | UI       | Visual/Functional  | ✅        | ✅        | Ensure cross-device usability          |
+
+---
+
+### 🧩 Additional High-Value Tests (Recommended Tools)
+
+| Area                   | Tool(s)                        | Purpose                                 |
+|------------------------|--------------------------------|-----------------------------------------|
+| Cross-browser Testing  | Playwright (Chromium/FF/WebKit)| Ensure consistency across browsers      |
+| Responsive Design      | Playwright + Device Emulation  | Mobile/tablet/Desktop views             |
+| Accessibility Testing  | Axe-core / Pa11y               | Validate WCAG/ARIA compliance (a11y)    |
+| Visual Regression      | Playwright Snapshots           | Detect unexpected UI changes            |
+| Performance Benchmarks | Lighthouse CI                  | Measure speed, Core Web Vitals          |
+| Security Scanning      | OWASP ZAP                      | Detect XSS, SQLi, etc.                  |
