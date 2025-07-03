@@ -1,119 +1,132 @@
-# ✅ Playwright Testing Framework for UI + API (TypeScript + Cucumber)
+#  Playwright Testing Framework for UI + API (TypeScript + Cucumber)
 
 ## 📌 What Is It?
 
-This is an automated testing framework built using **[Playwright](https://playwright.dev)** and **TypeScript**, supporting both **UI** and **API** testing. It follows **Behavior-Driven Development (BDD)** principles using **Cucumber** with **Gherkin syntax**, and applies the **Page Object Model (POM)** design pattern for scalability and reusability.
+This is an automated testing framework built using Playwright and TypeScript supporting both **UI** and **API** testing. It follows **Behavior-Driven Development (BDD)** principles using **Cucumber** and **Gherkin syntax**, and applies the **Page Object Model (POM)** design pattern for scalability and reusability.
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
-- 🔹 Unified support for UI and API testing
-- 🔹 BDD with Cucumber + Gherkin
-- 🔹 Page Object Model (POM)
-- 🔹 Reusable utilities and helpers
-- 🔹 HTML reports with screenshots
-- 🔹 Easily extendable and scalable
-
----
-
-## 🧱 Tech Stack
-
-| Tool          | Purpose                  |
-|---------------|--------------------------|
-| Playwright    | UI & API automation      |
-| TypeScript    | Strongly-typed scripting |
-| Cucumber      | BDD syntax integration   |
-| Node.js       | Runtime environment      |
+- 🔹 Unified support for UI and API automation  
+- 🔹 BDD with Cucumber and Gherkin syntax  
+- 🔹 Page Object Model (POM) architecture  
+- 🔹 Modular & reusable utilities  
+- 🔹 Auto-generated HTML reports with screenshots  
+- 🔹 Scalable & easily maintainable project structure  
 
 ---
 
-## 🛠️ Pre-requisites
+## Tech Stack
 
-Make sure the following tools are installed:
-
-| Software    | Required Version |
-|-------------|------------------|
-| Node.js     | v22.17.0 or higher |
-| VS Code     | v1.101.2 (recommended) |
-| Git         | Latest stable    |
+| Tool        | Purpose                      |
+|-------------|------------------------------|
+| Playwright  | UI & API automation testing  |
+| TypeScript  | Strongly typed scripting     |
+| Cucumber    | BDD-style testing framework  |
+| Node.js     | JavaScript runtime engine    |
 
 ---
 
-## 🧪 Project Setup (Local)
+## Pre-requisites
+
+Ensure the following tools are installed before running the project:
+
+| Tool       | Required Version     |
+|------------|----------------------|
+| Node.js    | `v22.17.0` or above  |
+| VS Code    | `v1.101.2` (suggested) |
+| Git        | Latest stable version |
+
+---
+
+##  Project Setup (Local Environment)
 
 ```bash
-# 1. Clone the repository
+# 1️⃣ Clone the repository
 git clone <your-repo-url>
 
-# 2. Navigate to the project folder
+# 2️⃣ Navigate to the project directory
 cd Playwright-Test-Automation-Framework-for-UI-API
 
-# 3. Install dependencies
+# 3️⃣ Install project dependencies
 npm install
 npx playwright install
+```
 
-## ▶️ Execution of Test Cases
+---
 
-To execute all tests, run the following command:
+## ▶️ Executing Tests
+
+To run all tests, execute the following command:
 
 ```bash
 npm run test
+```
 
-After the test run completes:
+---
 
-✅ An HTML-Cucumber Report is automatically generated at:
+## Test Reports
 
-bash
-Copy
-Edit
-./src/test-result/reports
-📸 Screenshots for each test failure are saved at:
+After execution:
 
-bash
-Copy
-Edit
-./src/test-result/screenshots
-📌 Note:
-For additional future test scenarios (positive and negative paths for both UI and API), refer to the additional-testscenarios.md file.
+-  **HTML-Cucumber Report** is generated automatically at:  
+  `./src/test-result/reports/`
 
-🗂️ File Structure Overview
-Folder/File	Purpose
-src/	Main test library containing features, page objects, steps, and utilities
-test-result/	Stores output reports and screenshots after test execution
-tsconfig.json	TypeScript compiler configuration
-cucumber.json	Cucumber config to locate feature files, steps, and set reporting rules
-package.json	Manages project metadata, scripts, and dependencies
-package-lock.json	Locks dependency tree for reproducible builds
+-  **Screenshots** of test success/failures are stored at:  
+  `./src/test-result/screenshots/`
 
-📁 Key Folder Breakdown
-src/test/pageObjects/
-Contains .ts files for both UI (SauceDemo) and API (Swagger Petstore).
+---
 
-Each file acts as a central repository for selectors and reusable methods.
+ **Note:**  
+For additional planned scenarios and test cases (including both UI and API), refer to:  
+[`additional-testscenarios.md`](./additional-testscenarios.md)
 
-src/test/features/
-Contains BDD-style .feature files written in Gherkin syntax.
+---
 
-ui/ – Feature files for UI tests
+##  File Structure Overview
 
-api/ – Feature files for API tests
+| Folder/File             | Purpose                                                                |
+|-------------------------|------------------------------------------------------------------------|
+| `src/`                  | Main test library (features, page objects, steps, utilities)           |
+| `test-result/`          | Stores test output (screenshots, reports)                              |
+| `tsconfig.json`         | TypeScript compiler configuration                                      |
+| `cucumber.json`         | Cucumber settings (feature paths, steps, reporting, modules)           |
+| `package.json`          | Project metadata, dependencies, scripts                                |
+| `package-lock.json`     | Dependency tree lock for reproducibility                               |
 
-src/test/steps/
-Step definitions (glue code) that bind Gherkin steps to test implementations.
+---
 
-src/test/utilities/
-Shared helper modules used across page objects, steps, and tests.
+## Key Folder Breakdown
 
-Promotes the DRY (Don't Repeat Yourself) principle.
+###  `src/test/pageObjects/`
+- `.ts` files for both UI (**SauceDemo**) and API (**Swagger Petstore**)
+- Central repository of reusable web locators and methods (POM pattern)
 
-src/test-result/reports/
-Location of automatically generated HTML-Cucumber reports.
+###  `src/test/features/`
+- Contains `.feature` files written in **Gherkin BDD syntax**
+  - `ui/` → UI scenarios
+  - `api/` → API scenarios
 
-src/test-result/screenshots/
-Screenshots captured during test failures are stored here for debugging.
+###  `src/test/steps/`
+- Step definition files (glue code between Gherkin steps & logic)
 
-📘 For test design reasoning and scenario justification, refer to:
-test-explanation.md
+###  `src/test/utilities/`
+- Shared utility/helper modules reused across the project (follows **DRY** principle)
 
-👤 Author: Sivaramakrishna Perla
+###  `src/test-result/reports/`
+- Auto-generated HTML reports (Cucumber format)
+
+###  `src/test-result/screenshots/`
+- Screenshots of test failures for visual debugging
+
+---
+
+
+---
+
+##  Author
+
+**Sivaramakrishna Perla**
+
+---
