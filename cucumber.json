@@ -1,0 +1,22 @@
+{
+    "default":{
+        "paths": [
+            "src/test/features/api/*.feature",
+            "src/test/features/ui/*.feature"
+            
+        ],
+        "publishQuite":true,
+        "dryRun": false,
+        "require": [
+            "src/test/steps/*.ts",
+            "src/test/utilities/*.ts"
+        ],
+        "requiremodule": [
+            "ts-node/register"
+        ],
+        "format": [
+            "html:test-result/reports/html-cucumber-report.html"
+        ],
+        "parallel": 2
+    }
+}
