@@ -107,8 +107,8 @@ For additional planned scenarios and test cases (including both UI and API), ref
 
 ###  `src/test/features/`
 - Contains `.feature` files written in **Gherkin BDD syntax**
-  - `ui/` → UI scenarios
-  - `api/` → API scenarios
+  - `ui/` → UI scenarios (for sauce demo website)
+  - `api/` → API scenarios (for swagger petstore)
 
 ###  `src/test/steps/`
 - Step definition files (glue code between Gherkin steps & logic)
