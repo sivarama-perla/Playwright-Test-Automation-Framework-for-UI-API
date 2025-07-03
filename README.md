@@ -8,12 +8,12 @@ This is an automated testing framework built using Playwright and TypeScript sup
 
 ##  Key Features
 
-- 🔹 Unified support for UI and API automation  
-- 🔹 BDD with Cucumber and Gherkin syntax  
-- 🔹 Page Object Model (POM) architecture  
-- 🔹 Modular & reusable utilities  
-- 🔹 Auto-generated HTML reports with screenshots  
-- 🔹 Scalable & easily maintainable project structure  
+-  Unified support for UI and API automation  
+-  BDD with Cucumber and Gherkin syntax  
+-  Page Object Model (POM) architecture  
+-  Modular & reusable utilities  
+-  Auto-generated HTML reports with screenshots  
+-  Scalable & easily maintainable project structure  
 
 ---
 
