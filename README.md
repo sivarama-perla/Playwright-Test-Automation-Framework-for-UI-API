@@ -56,7 +56,7 @@ npx playwright install
 
 ---
 
-## ▶️ Executing Tests
+## Executing Tests
 
 To run all tests, execute the following command:
 
