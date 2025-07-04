@@ -41,19 +41,6 @@ Given('I have a valid pet', async function () {
 
   const getResponse = await axios.get(`https://petstore.swagger.io/v2/pet/${this.petId}`, { validateStatus: () => true });
 
-  // Retry GET up to 10 times with a short delay
-  // let found = false;
-  // for (let i = 0; i < 10; i++) {
-  //   const getResponse = await axios.get(`https://petstore.swagger.io/v2/pet/${this.petId}`, { validateStatus: () => true });
-  //   if (getResponse.status === 200) {
-  //     found = true;
-  //     break;
-  //   }
-  //   await new Promise(res => setTimeout(res, 5000)); // waits 5seconds before retrying
-  // }
-  // if (!found) {
-  //   throw new Error(`Pet with ID ${this.petId} was not found after creation.`);
-  // }
 
 });
 
