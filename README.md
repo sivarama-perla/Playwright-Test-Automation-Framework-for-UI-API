@@ -3,6 +3,7 @@
 ## What is this repo about?
 
 This is a test automation framework built using Playwright and TypeScript supporting both **UI** and **API** testing. It follows **Behavior-Driven Development (BDD)** principles using **Cucumber** and **Gherkin syntax**, and applies the **Page Object Model (POM)** design pattern for scalability and reusability.
+As a example, I have automated Sauce Demo for UI and Swagger Perstore for API wesbites in this framework.
 
 ---
 
